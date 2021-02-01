@@ -6,7 +6,11 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.Getter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Entity;
 
 @Getter
 @NoArgsConstructor
