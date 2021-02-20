@@ -1,8 +1,8 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
-#PROJECT_NAME=com.miracomJY.jy
-PROJECT_NAME=miracom
+PROJECT_NAME=com.miracomJY.jy
+#PROJECT_NAME=miracom
 
 #cd $REPOSITORY/$PROJECT_NAME/
 cp $REPOSITORY/zip/*.jar $REPOSITORY /
@@ -30,7 +30,6 @@ echo "> JAR NAME: $JAR_NAME"
 echo "> $JAR_NAME 에 실행권한 추가"
 
 chmod +x $JAR_NAME
-
 echo "> $JAR_NAME 실행"
 
 nohup java -jar \
