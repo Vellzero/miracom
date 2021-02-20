@@ -5,7 +5,10 @@ PROJECT_NAME=com.miracomJY.jy
 #PROJECT_NAME=miracom
 
 #cd $REPOSITORY/$PROJECT_NAME/
-cp $REPOSITORY/zip/*.jar $REPOSITORY /
+
+echo "> build 파일 복사"
+
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동 중인 애플리케이션 pid 확인"
 
@@ -35,5 +38,5 @@ echo "> $JAR_NAME 실행"
 nohup java -jar \
         -Dspring.config.location=classpath:/application.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties,classpath:/application-real.properties \
         -Dspring.profiles.active=real \
-        $REPOSITORY/$JAR_NAME 2>&1 &
+        $JAR_NAME > $REPOSITORY/zip/nohup.out 2>&1 &
 
